@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(process.env.PORT ?? 3000);
+  app.enableCors(); // <--- ESSA LINHA LIBERA O ACESSO PARA O VUE
+  await app.listen(3000);
 }
 bootstrap();
