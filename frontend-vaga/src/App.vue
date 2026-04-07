@@ -11,7 +11,6 @@ interface Teclado {
 const teclados = ref<Teclado[]>([])
 const comprados = ref<Teclado[]>([])
 const removidos = ref<Teclado[]>([])
-
 const pressTimer = ref<any>(null);
 const deletingId = ref<number | null>(null);
 
@@ -195,31 +194,16 @@ onUnmounted(() => {
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { 
-  background-color: var(--preto-site); 
-  color: #ffffff; 
-  font-family: var(--fonte-principal); 
-  overflow-x: hidden;
-}
+body { background-color: var(--preto-site); color: #ffffff; font-family: var(--fonte-principal); overflow-x: hidden;}
 
-.navbar { 
-  position: fixed; top: 0; left: 0; width: 100%; height: 80px; 
-  background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(15px);
-  z-index: 9999; border-bottom: 1px solid rgba(255,255,255,0.05); 
-  display: flex; align-items: center;
-}
-
+.navbar { position: fixed; top: 0; left: 0; width: 100%; height: 80px; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(15px); z-index: 9999; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; }
 .nav-content { width: 100%; padding: 0 50px; display: flex; justify-content: space-between; align-items: center; }
-
 .nav-logo { font-family: Helvetica, sans-serif; color: var(--secundaria); font-size: 2.5rem; font-weight: bold; }
-
 .nav-links-container { display: flex; gap: 20px; background: rgba(255, 255, 255, 0.03); padding: 10px 25px; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.1); }
-
 .nav-links-container a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; font-weight: 700; transition: 0.3s; }
 .nav-links-container a.active, .nav-links-container a:hover { color: #fff; text-shadow: 0 0 10px var(--secundaria); }
 
 .container { max-width: 800px; margin: 140px auto 100px; padding: 0 20px; position: relative; z-index: 10; }
-
 .main-title h1 { text-align: center; font-family: var(--fonte-destaque); font-size: 5rem; text-transform: uppercase; margin-bottom: 50px; line-height: 0.9; }
 
 .section-group { margin-top: 60px; }
@@ -242,9 +226,7 @@ body {
 .btn-red-swipe { background: var(--primaria); }
 
 .card-header { display: flex; justify-content: space-between; align-items: center; }
-
 .desc-center { color: rgba(255,255,255,0.6); margin: 10px 0 0; text-align: center; line-height: 1.5; }
-
 .btn-x { background: rgba(255,255,255,0.1); border: none; color: #fff; width: 25px; height: 25px; border-radius: 50%; cursor: pointer; }
 
 .progress-line { position: absolute; bottom: 0; left: 0; height: 5px; background: var(--secundaria); animation: fill 1.5s linear forwards; }
